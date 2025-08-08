@@ -1,7 +1,8 @@
 # BuySell Parser (Stage 2)
 
 High-performance real estate parser from the [BuySellCyprus](https://www.buysellcyprus.com/) website.
-It collects detailed information about each property and stores the results in a PostgreSQL database.
+Parses individual listing pages and stores structured property data in a PostgreSQL database.
+Handles Cloudflare protection, dynamic JS content, and bot detection via Selenium and stealth techniques.
 ---
 
 ## Features
@@ -25,10 +26,59 @@ It collects detailed information about each property and stores the results in a
 
 ## Installation
 
-
+1. **Clone the repository**
+    ```bash
+   git clone https://github.com/yourusername/BuySellCyprus-parser2.git
+    cd BuySellCyprus-parser2
+    ```
+2. **Create and activate a virtual environment**
+   - On Windows:
+     ```bash
+     python -m venv venv
+     venv\Scripts\activate
+     ```
+   - On macOS/Linux:
+     ```bash
+     python3 -m venv venv
+     source venv/bin/activate
+     ```
+3. **Install dependencies**
+    ```bash
+   pip install -r requirements.txt
+   ```
+4. **Configure the project**
+   - Edit the `config.py`file and set your database and parsing parameters.
+   - Run the `proxy_writer.py` file to write your proxy
 ---
+5. **Run the parser**
+    ```bash
+    python main.py
+    ```
 
 ## Project structure
+
+- BuySellCyprus-parser-stage2/
+  - core/ — Driver logic and progress management
+    - __init__.py
+    - driver_manager.py
+  - data/ — Data files
+    - many_proxy.json
+    - parser.lock
+  - extensions/
+    - __init__.py
+    - proxy_extension.py
+  - proxy_manager/ — Everything related to proxies
+    - __init__.py
+    - many_proxy.py
+    - proxy_writer.py
+  - main.py
+  - parser
+  - config.py
+  - db_utils.py
+  - lock_utils.py
+  - README.md
+  - requirements.txt
+  - .gitignore
 
 ---
 
