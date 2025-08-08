@@ -1,0 +1,8 @@
+[1]
+    chrome_options.add_argument("--blink-settings=imagesEnabled=false")
+    нельзя добавить потому что мешает парсингу некоторых данных
+
+[2]
+    chrome_options.add_argument("headless") и
+    chrome_options.add_argument("headless=new")
+    нельзя добавить потому что мешает работе программы
