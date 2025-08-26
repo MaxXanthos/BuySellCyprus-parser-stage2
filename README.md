@@ -83,4 +83,4 @@ Handles Cloudflare protection, dynamic JS content, and bot detection via Seleniu
 ---
 
 ## Feedback
-If you find a bug or want to suggest an improvement, open [issue](https://github.com/MaxXanthos/BuySellCyprus-parser2/issues).
+If you find a bug or want to suggest an improvement, open [issue](https://github.com/MaxXanthos/BuySellCyprus-parser-stage2/issues).
